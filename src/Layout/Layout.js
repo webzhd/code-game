@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Base from '../Component/index';
 import commonCss from '../Jss/common';
-import cssData from '../MockData/css'
+import cssData from '../MockData/css';
+import jsData from '../MockData/javascript'
 export default class SelfLayout extends Component {
     constructor (props){
         super(props);
@@ -24,7 +25,7 @@ export default class SelfLayout extends Component {
     };
     formatData(){
         let result = [], row = [], len = 0;
-        cssData.forEach((word, i)=>{
+        jsData.forEach((word, i)=>{
             row.push(word);
             len += word.text.length;
             if(len >= 80){
@@ -87,9 +88,9 @@ export default class SelfLayout extends Component {
                     <span className={`${commonCss.button} primary`} onClick={this.formatData}>start</span>
                 </p>
                 <div>
-                    <p>{desc}</p>
                     <p>正确率：{inputAccuracy}%</p>
                     <p>速度：{inputVelocity} code/分</p>
+                    <p>{desc}</p>
                 </div>
                 {
                     content.map((row, index)=>{

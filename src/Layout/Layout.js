@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import Base from '../Component/index';
 import commonCss from '../Jss/common';
 import cssData from '../MockData/css';
-import jsData from '../MockData/javascript'
+import jsData from '../MockData/javascript';
+import testData from '../MockData/test'
 export default class SelfLayout extends Component {
     constructor (props){
         super(props);
@@ -27,12 +28,12 @@ export default class SelfLayout extends Component {
         let result = [], row = [], len = 0;
         jsData.forEach((word, i)=>{
             row.push(word);
-            len += word.text.length;
-            if(len >= 80){
+            len += (word.text.length+1);
+            if(len >= 90){
                 const item = row.pop();
                 result.push(row);
                 row = [item];
-                len = item.text.length;
+                len = item.text.length + 1;
             }
         });
         result.push(row)
@@ -82,31 +83,39 @@ export default class SelfLayout extends Component {
     }
     render (){
         const {content, activeRow, activeWord, inputAccuracy, inputVelocity} = this.state;
-        const desc = content[activeRow] &&  content[activeRow][activeWord] && content[activeRow][activeWord].desc
+        const word = content[activeRow] &&  content[activeRow][activeWord] && content[activeRow][activeWord];
+        const desc = word && word.desc || "" 
+        const url = word && word.url || "" 
         return (<div className={commonCss.content}>
                 <p>
                     <span className={`${commonCss.button} primary`} onClick={this.formatData}>start</span>
                 </p>
-                <div>
+                <div style={{display: content.length>0 ?"block": "none", minHeight:"120px"}}>
                     <p>正确率：{inputAccuracy}%</p>
                     <p>速度：{inputVelocity} code/分</p>
-                    <p>{desc}</p>
+                    <br/>
+                    <p style={{color: "red"}}>{desc}<a href={url} target="_blank">api详情传送门</a></p>
+                    <br/>
+                    <hr/>
                 </div>
-                {
-                    content.map((row, index)=>{
-                        return (
-                            <Base content={row}
-                             key={index} 
-                             row={index} 
-                             isEnd={index === content.length-1}
-                             activeRow={activeRow}
-                             changeActiveRow={this.changeActiveRow}
-                             endInput={this.endInput}
-                             activeWordIndex={this.activeWordIndex} 
-                             computedInfo={this.computedInfo} />
-                        )
-                    })
-                }
+                <div style={{height: "600px", overflow: "auto"}}>
+                    {
+                        content.map((row, index)=>{
+                            return (
+                                <Base content={row}
+                                key={index} 
+                                row={index} 
+                                isEnd={index === content.length-1}
+                                activeRow={activeRow}
+                                changeActiveRow={this.changeActiveRow}
+                                endInput={this.endInput}
+                                activeWordIndex={this.activeWordIndex} 
+                                computedInfo={this.computedInfo} />
+                            )
+                        })
+                    }
+                </div>
+                    
             </div>)
     }
 }

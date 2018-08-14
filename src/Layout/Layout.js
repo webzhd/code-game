@@ -17,6 +17,24 @@ export default class SelfLayout extends Component {
 
         this.info= []; /**保存每行输入情况 */
         this.startTime = 0;
+        this.restart = {
+            clientList: {},
+            listen: (key, fn) =>{
+                if(!this.restart.clientList[key] || this.restart.clientList[key].length === 0){
+                    this.restart.clientList[key]=[]
+                };
+                this.restart.clientList[key].push(fn)
+            },
+            trigger:(key, params) => {
+                if(this.restart.clientList[key] && this.restart.clientList[key].length !== 0){
+                    this.restart.clientList[key].forEach(fn=>fn(params));
+                };
+            },
+            remove: (key, fn)=>{
+
+            }
+
+        }
        
         this.formatData = this.formatData.bind(this);                           // 格式化原始数据      
         this.changeActiveRow = this.changeActiveRow.bind(this);                 // 行数发生改变   
@@ -39,6 +57,8 @@ export default class SelfLayout extends Component {
         result.push(row)
         this.setState({
             content: result
+        }, ()=>{
+            this.restart.trigger('restart', "restart")
         });
         console.log(result)
         this.startTime = new Date().getTime();
@@ -103,6 +123,7 @@ export default class SelfLayout extends Component {
                         content.map((row, index)=>{
                             return (
                                 <Base content={row}
+                                restart={this.restart}
                                 key={index} 
                                 row={index} 
                                 isEnd={index === content.length-1}

@@ -21,6 +21,9 @@ export default class Base extends Component {
         if(this.props.activeRow === this.props.row){
           this.focusTextInput();
         }
+        this.props.restart.listen('restart', (params)=>{
+          console.log(this, params)
+        })
       }
       componentWillReceiveProps(nextProps) {
         if(nextProps.activeRow === this.props.row){

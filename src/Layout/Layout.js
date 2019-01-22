@@ -70,11 +70,11 @@ export default class SelfLayout extends Component {
         }
         data.forEach((word, i) => {
             row.push(word);
-            len += (word.text.length + 1);
-            if (len >= 90) {
-                const item = row.pop();
-                result.push(row);
-                row = [item];
+            len += (word.text.length + 1);// 单词长度和一个空格
+            if (len >= 90) { // 超出一行
+                const item = row.pop();  // 取出最后一个
+                result.push(row); // 把row放在result里面
+                row = [item]; // 取出的放到第二行并初始化row
                 len = item.text.length + 1;
             }
         });

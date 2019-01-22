@@ -1,17 +1,5 @@
 export default [
   {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/length",
-      "text": "Array.length",
-      "desc": "length 是Array的实例属性。返回或设置一个数组中的元素个数。该值是一个无符号 32-bit 整数，并且总是大于数组最高项的下标。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype",
-      "text": "Array.prototype",
-      "desc": "Array.prototype  属性表示 Array 构造函数的原型，并允许您向所有Array对象添加新的属性和方法。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables",
-      "text": "Array.prototype[@@unscopables]",
-      "desc": "Symbol属性 @@unscopable 包含了所有 ES2015 (ES6) 中新定义的且并未被更早的 ECMAScript 标准收纳的属性名。这些属性并不包含在 with 语句绑定的环境中"
-  }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/from",
       "text": "Array.from()",
       "desc": "Array.from() 方法从一个类似数组或可迭代对象中创建一个新的数组实例。"
@@ -156,18 +144,6 @@ export default [
       "text": "values()",
       "desc": "values() 方法返回一个新的 Array Iterator 对象，该对象包含数组每个索引的值"
   }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator",
-      "text": "Array.prototype[@@iterator]()",
-      "desc": "@@iterator 属性和 values() 属性的初始值均为同一个函数对象。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unobserve",
-      "text": "Array.unobserve()",
-      "desc": "Array.unobserve()方法用来移除Array.observe()设置的所有观察者。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species",
-      "text": "get Array[@@species]",
-      "desc": "Array[@@species]访问器属性返回 Array 的构造函数。"
-  }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments",
       "text": "Function.arguments",
       "desc": "function.arguments 属性代表传入函数的实参，它是一个类数组对象。"
@@ -175,10 +151,6 @@ export default [
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/arity",
       "text": "Function.arity",
       "desc": "返回一个函数的形参数量."
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/prototype",
-      "text": "Date.prototype",
-      "desc": "Date.prototype 属性表示 Date 构造函数的原型。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/UTC",
       "text": "Date.UTC()",
@@ -232,38 +204,6 @@ export default [
       "text": "getTimezoneOffset()",
       "desc": "getTimezoneOffset() 方法返回协调世界时（UTC）相对于当前时区的时间差值，单位为分钟。"
   }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDate",
-      "text": "getUTCDate()",
-      "desc": "getUTCDate() 方法以世界时为标准，返回一个指定的日期对象为一个月中的第几天"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCDay",
-      "text": "getUTCDay()",
-      "desc": "getUTCDay() 方法以世界时为标准，返回一个指定的日期对象为一星期中的第几天，其中 0 代表星期天。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear",
-      "text": "getUTCFullYear()",
-      "desc": "getUTCFullYear() 以世界时为标准，返回一个指定的日期对象的年份。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCHours",
-      "text": "getUTCHours()",
-      "desc": "getUTCHours() 方法以世界时为标准，返回一个指定的日期对象的小时数。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds",
-      "text": "getUTCMilliseconds()",
-      "desc": "getUTCMilliseconds() 方法以世界时为标准，返回一个指定的日期对象的毫秒数。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes",
-      "text": "getUTCMinutes()",
-      "desc": "getUTCMinutes() 方法以世界时为标准，返回一个指定的日期对象的分钟数。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth",
-      "text": "getUTCMonth()",
-      "desc": "getUTCMonth() 方法以世界时为标准，返回一个指定的日期对象的月份，它是从 0 开始计数的（0 代表一年的第一个月）。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds",
-      "text": "getUTCSeconds()",
-      "desc": "getUTCSeconds() 方法以世界时为标准，返回一个指定的日期对象的秒数。"
-  }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getYear",
       "text": "getYear()",
       "desc": "getYear() 方法返回指定的本地日期的年份。因为 getYear 不返回千禧年[full years] (\"year 2000 problem\")，所以这个方法不再被使用，现在替换为 getFullYear ."
@@ -299,35 +239,7 @@ export default [
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime",
       "text": "setTime()",
       "desc": "setTime() 方法以一个表示从1970-1-1 00:00:00 UTC计时的毫秒数为来为 Date 对象设置时间。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCDate",
-      "text": "setUTCDate()",
-      "desc": "setUTCDate() 方法就是根据全球时间设置特定date对象的日期。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear",
-      "text": "setUTCFullYear()",
-      "desc": "setUTCFullYear() 方法根据世界标准时间为一个具体日期设置年份。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCHours",
-      "text": "setUTCHours()",
-      "desc": "The setUTCHours() method sets the hour for a specified date according to universal time, and returns the number of milliseconds since 1 January 1970 00:00:00 UTC until the time represented by the updated Date instance."
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMilliseconds",
-      "text": "setUTCMilliseconds()",
-      "desc": "setUTCMilliseconds() 方法会根据世界时来设置指定时间的毫秒数。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMinutes",
-      "text": "setUTCMinutes()",
-      "desc": "setUTCMinutes()方法会根据世界协调时（UTC）来设置指定日期的分钟数。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCMonth",
-      "text": "setUTCMonth()",
-      "desc": "setUTCMonth()方法根据通用的时间来设置一个准确的月份"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setUTCSeconds",
-      "text": "setUTCSeconds()",
-      "desc": "此 setUTCSeconds() 方法为一个依据国际通用时间的特定日期设置秒数。"
-  }, {
+  },  {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setYear",
       "text": "setYear()",
       "desc": "The setYear() method sets the year for a specified date according to local time. Because setYear does not set full years (\"year 2000 problem\"), it is no longer used and has been replaced by the setFullYear method."
@@ -375,34 +287,6 @@ export default [
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString",
       "text": "toTimeString()",
       "desc": "toTimeString() 方法以人类易读形式返回一个日期对象时间部分的字符串，该字符串以美式英语格式化。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/toUTCString",
-      "text": "toUTCString()",
-      "desc": "toUTCString() 方法把一个日期转换为一个字符串，使用UTC时区。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/valueOf",
-      "text": "valueOf()",
-      "desc": "valueOf() 方法返回一个 Date 对象的原始值。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/E",
-      "text": "Math.E",
-      "desc": "Math.E 属性表示自然对数的底数（或称为基数），e，约等于 2.718。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/LN10",
-      "text": "Math.LN10",
-      "desc": "Math.LN10 属性表示 10 的自然对数，约为 2.302："
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/LN2",
-      "text": "Math.LN2",
-      "desc": "Math.LN2 属性表示 2 的自然对数，约为 0.693："
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG10E",
-      "text": "Math.LOG10E",
-      "desc": "Math.LOG10E 属性表示以 10 为底数，e 的对数，约为 0.434："
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/LOG2E",
-      "text": "Math.LOG2E",
-      "desc": "Math.LOG2E 属性表示以 2 为底数，e 的对数，约为 1.442："
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/PI",
       "text": "Math.PI",
@@ -588,10 +472,6 @@ export default [
       "text": "Number.POSITIVE_INFINITY",
       "desc": "Number.POSITIVE_INFINITY 属性表示正无穷大。"
   }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/prototype",
-      "text": "Number.prototype",
-      "desc": "Number.prototype 属性表示 Number 构造函数的原型。"
-  }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/isFinite",
       "text": "Number.isFinite()",
       "desc": "Number.isFinite() 方法用来检测传入的参数是否是一个有穷数（finite number）。"
@@ -617,31 +497,31 @@ export default [
       "desc": "Number.parseInt() 方法可以根据给定的进制数把一个字符串解析成整数。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toExponential",
-      "text": "Number.prototype.toExponential()",
+      "text": "toExponential()",
       "desc": "toExponential() 方法以指数表示法返回该数值字符串表示形式。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed",
-      "text": "Number.prototype.toFixed()",
+      "text": "toFixed()",
       "desc": "toFixed() 方法使用定点表示法来格式化一个数。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString",
-      "text": "Number.prototype.toLocaleString()",
+      "text": "toLocaleString()",
       "desc": "toLocaleString() 方法返回这个数字在特定语言环境下的表示字符串。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toPrecision",
-      "text": "Number.prototype.toPrecision()",
+      "text": "toPrecision()",
       "desc": "toPrecision() 方法以指定的精度返回该数值对象的字符串表示。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toSource",
-      "text": "Number.prototype.toSource()",
+      "text": "toSource()",
       "desc": "toSource() 方法返回该对象源码的字符串表示。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toString",
-      "text": "Number.prototype.toString()",
+      "text": "toString()",
       "desc": "toString() 方法返回指定 Number 对象的字符串表示形式。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/valueOf",
-      "text": "Number.prototype.valueOf()",
+      "text": "valueOf()",
       "desc": "valueOf() 方法返回一个被 Number 对象包装的原始值。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number/toInteger",
@@ -724,22 +604,6 @@ export default [
       "text": "Object.preventExtensions()",
       "desc": "Object.preventExtensions()方法让一个对象变的不可扩展，也就是永远不能再添加新的属性。"
   }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__",
-      "text": "__defineGetter__()",
-      "desc": "__defineGetter__ 方法可以将一个函数绑定在当前对象的指定属性上，当那个属性的值被读取时，你所绑定的函数就会被调用。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__",
-      "text": "__defineSetter__()",
-      "desc": "__defineSetter__ 方法可以将一个函数绑定在当前对象的指定属性上，当那个属性被赋值时，你所绑定的函数就会被调用。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__",
-      "text": "__lookupGetter__()",
-      "desc": "__lookupGetter__ 方法会返回当前对象上指定属性的属性读取访问器函数（getter）。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__",
-      "text": "__lookupSetter__()",
-      "desc": "一个绑定了setter的特殊属性的函数引用。"
-  }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/eval",
       "text": "eval()",
       "desc": "Object.eval() 方法用于在对象的上下文中对 JavaScript 代码字符串求值，但该方法已被移除。"
@@ -778,7 +642,7 @@ export default [
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/watch",
       "text": "watch()",
-      "desc": "undefined."
+      "desc": ""
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/seal",
       "text": "Object.seal()",
@@ -796,56 +660,20 @@ export default [
       "text": "Object.values()",
       "desc": "Object.values()方法返回一个给定对象自己的所有可枚举属性值的数组，值的顺序与使用for...in循环的顺序相同 ( 区别在于 for-in 循环枚举原型链中的属性 )。"
   }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/arguments",
-      "text": "Function.arguments",
-      "desc": "function.arguments 属性代表传入函数的实参，它是一个类数组对象。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/arity",
-      "text": "Function.arity",
-      "desc": "返回一个函数的形参数量."
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/caller",
-      "text": "Function.caller",
-      "desc": "返回调用指定函数的函数."
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/displayName",
-      "text": "Function.displayName",
-      "desc": "function.displayName属性获取函数的显示名称"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/length",
-      "text": "Function.length",
-      "desc": ""
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name",
-      "text": "Function.name",
-      "desc": "name 属性返回一个函数声明的名称。"
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype",
-      "text": "Function.prototype",
-      "desc": "Function.prototype 属性存储了 Function 的原型对象。"
-  }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply",
-      "text": "Function.prototype.apply()",
+      "text": "apply()",
       "desc": "apply() 方法调用一个函数, 其具有一个指定的this值，以及作为一个数组（或类似数组的对象）提供的参数。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind",
-      "text": "Function.prototype.bind()",
+      "text": "bind()",
       "desc": "bind()方法创建一个新的函数, 当被调用时，将其this关键字设置为提供的值，在调用新函数时，在任何提供之前提供一个给定的参数序列。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call",
-      "text": "Function.prototype.call()",
+      "text": "call()",
       "desc": "call() 方法调用一个函数, 其具有一个指定的this值和分别地提供的参数(参数的列表)。"
   }, {
       "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/isGenerator",
-      "text": "Function.prototype.isGenerator()",
+      "text": "isGenerator()",
       "desc": "判断一个函数是否是一个生成器."
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toSource",
-      "text": "Function.prototype.toSource()",
-      "desc": "返回函数的源代码的字符串表示."
-  }, {
-      "url": "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/toString",
-      "text": "Function.prototype.toString()",
-      "desc": "该 toString() 方法返回一个表示当前函数源代码的字符串。"
   }
 ]

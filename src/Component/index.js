@@ -52,18 +52,22 @@ export default class Base extends Component {
 
   changeValue = (e) => {
     const value = e.target.value;
+    this.setState({
+      cValue: value
+    })
+    this.checkSucOrErr(value)
+  }
+  checkSucOrErr = (value) => {
     const { len, isError } = this.state;
     const vLen = value.length;
     const lLen = len.length;
     isError[value.length - 1] = value.charAt(vLen - 1) === len.charAt(vLen - 1);
-    const newError = isError.slice(0, vLen);
-    this.props.computedInfo(newError)
+    this.props.computedInfo(isError)
     if (vLen === lLen) {
       this.blurTextInput();
     }
     this.setState({
-      cValue: value,
-      isError: newError
+      isError: isError
     })
   }
 
@@ -73,11 +77,12 @@ export default class Base extends Component {
     let codeNumber = 0;
     return <div>
       <p className={content}>
-        {this.props.content.map((world, i) => {
+        {
+          this.props.content.map((world, i) => {
           if (codeNumber === cValue.length - 1) { // 当前字符所在的位置的i的值
             this.props.activeWordIndex(i);
           }
-          const result = (<span key={i}>
+         return (<span key={i}>
             {[...world.text, " "].map((s, j) => {
               const targetCode = cValue.charAt(codeNumber);
               const span = (<span className={targetCode ? targetCode === s ? success : error : ""} key={`${i}-${j}`}>{s}</span>)
@@ -85,7 +90,7 @@ export default class Base extends Component {
               return span
             })}
           </span>)
-          return result;
+
         })}
       </p>
       <input className={content}
@@ -93,7 +98,7 @@ export default class Base extends Component {
         ref={this.textInput}
         value={cValue}
         onChange={this.changeValue}
-        onKeyUp={this.endInput} />
+        />
     </div>
   }
 }

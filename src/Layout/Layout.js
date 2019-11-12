@@ -4,6 +4,12 @@ import commonCss from '../Jss/common';
 import cssData from '../MockData/css';
 import jsData from '../MockData/javascript';
 import testData from '../MockData/test';
+import jsArray from '../MockData/js-array'
+import jsDate from '../MockData/js-date'
+import jsMath from '../MockData/js-math'
+import jsNumber from '../MockData/js-number'
+import jsObject from '../MockData/js-object'
+
 const selectStyle = {
     display: "inline-block",
     width: "120px",
@@ -55,6 +61,21 @@ export default class SelfLayout extends Component {
         let result = [], row = [], len = 0, data = [];
         const { selectValue } = this.state;
         switch (selectValue) {
+            case "js-array":
+                data = jsArray;
+                break;
+            case 'js-date':
+                data = jsDate;
+                break;
+            case 'js-math':
+                data = jsMath;
+                break;
+            case 'js-number':
+                data = jsNumber;
+                break;
+            case 'js-object':
+                data = jsObject;
+                break;
             case "javascript":
                 data = jsData;
                 break;
@@ -143,7 +164,12 @@ export default class SelfLayout extends Component {
         return (<div className={commonCss.content}>
             <p>
                 <select value={selectValue} onChange={this.changeSelect} style={selectStyle}>
-                    <option value="javascript">javascript</option>
+                    <option value="js-array">js Array</option>
+                    <option value="js-date">js Date</option>
+                    <option value="js-math">js Math</option>
+                    <option value="js-number">js Number</option>
+                    <option value="js-object">js Object</option>
+                    <option value="javascript">js All</option>
                     <option value="css">css</option>
                     <option value="英语打字">英语打字</option>
                 </select>

@@ -21,12 +21,13 @@ export default class SelfLayout extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectValue: "javascript",
+            selectValue: "js-array",
             content: [],  /**保存原始数据 */
             activeRow: 0, /** 当前正在输入的行数*/
             activeWord: 0, /** 当前正在输入的单词下标*/
             inputVelocity: 0, /**速度*/
             inputAccuracy: 0, /** 准确率 */
+            key: '123123'
         };
 
         this.info = []; /**保存每行输入情况 */
@@ -101,7 +102,9 @@ export default class SelfLayout extends Component {
         });
         result.push(row)
         this.setState({
-            content: result
+            content: result,
+            activeRow: 0,
+            key: Math.random()
         }, ()=>{
             this.restart.trigger('restart', "restart")
         });
@@ -157,7 +160,7 @@ export default class SelfLayout extends Component {
     }
 
     render() {
-        const { content, activeRow, activeWord, inputAccuracy, inputVelocity, selectValue } = this.state;
+        const { content, activeRow, activeWord, inputAccuracy, inputVelocity, selectValue, key } = this.state;
         const word = content[activeRow] && content[activeRow][activeWord] && content[activeRow][activeWord];
         const desc = (word && word.desc) || ""
         const url = (word && word.url) || ""
@@ -169,7 +172,6 @@ export default class SelfLayout extends Component {
                     <option value="js-math">js Math</option>
                     <option value="js-number">js Number</option>
                     <option value="js-object">js Object</option>
-                    <option value="javascript">js All</option>
                     <option value="css">css</option>
                     <option value="英语打字">英语打字</option>
                 </select>
@@ -183,7 +185,7 @@ export default class SelfLayout extends Component {
                 <br />
                 <hr />
             </div>
-            <div style={{ height: "600px", overflow: "auto" }}>
+            <div key={key} style={{ height: "600px", overflow: "auto" }}>
                 {
                     content.map((row, index) => {
                         return (

@@ -1,10 +1,11 @@
 import test from './test'
-import jsArray from './js-array'
-import css from './css'
-import jsDate from './js-date'
-import jsMath from './js-math'
-import jsNumber from './js-number'
-import jsObject from './js-object'
+import jsArray from './js/js-array'
+import css from './css/css'
+import jsDate from './js/js-date'
+import jsMath from './js/js-math'
+import jsNumber from './js/js-number'
+import jsObject from './js/js-object'
+import jsString from './js/js-string'
 
 
 function splitRow(data: any[]): any[] {
@@ -41,3 +42,5 @@ export const jsMathData = splitRow(jsMath)
 export const jsNumberData = splitRow(jsNumber)
 
 export const jsObjectData = splitRow(jsObject)
+
+export const jsStringData = splitRow(jsString)

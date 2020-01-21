@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Coder, { CoderMethots } from '../Components/Coder';
 import produce from 'immer'
-import { testData, jsArrayData, jsDateData, jsMathData, jsNumberData, jsObjectData, cssData } from '../data'
+import { jsStringData, jsArrayData, jsDateData, jsMathData, jsNumberData, jsObjectData, cssData } from '../data'
 import styles from './index.less'
 
 export default function Index() {
@@ -46,7 +46,7 @@ export default function Index() {
             setCodeData(jsObjectData)
             break;
         case '6':
-            setCodeData(cssData)
+            setCodeData(jsStringData)
             break;
         default :
             setCodeData(jsArrayData)
@@ -74,7 +74,7 @@ export default function Index() {
                 <option value="3">Math</option>
                 <option value="4">Number</option>
                 <option value="5">Object</option>
-                <option value="6">Css</option>
+                <option value="6">String</option>
             </select>
 
             <button className="button ml-sm" onClick={start}>开始</button>

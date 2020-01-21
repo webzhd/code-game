@@ -86,6 +86,11 @@ function Row(props: RowProps, ref: React.Ref<RowRefMethods>) {
         }
     }
 
+    function paste(e: React.ClipboardEvent<HTMLInputElement>) {
+        e.preventDefault()
+        return false
+    }
+
     return (<div className={styles.box}>
         <p className={styles['content-row']}>
             {
@@ -102,7 +107,8 @@ function Row(props: RowProps, ref: React.Ref<RowRefMethods>) {
             }
         </p>
 
-        <input readOnly={isReadOnly} ref={inputRef} onChange={changeInputValue} className={styles['content-row']} type="text"/>
+        <input readOnly={isReadOnly} ref={inputRef} className={styles['content-row']} type="text"
+            onChange={changeInputValue} onPaste={paste}/>
         
         {itemWord && !isReadOnly && <div className={styles.desc}>
             <p><a href={itemWord.url}>[查看详情]</a>{itemWord.desc}</p>

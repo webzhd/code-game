@@ -6,6 +6,9 @@ import jsMath from './js/js-math'
 import jsNumber from './js/js-number'
 import jsObject from './js/js-object'
 import jsString from './js/js-string'
+import jsMapSet from './js/js-map-set'
+import jsPromise from './js/js-promise'
+import jsGlobal from './js/js-global'
 
 
 function splitRow(data: any[]): any[] {
@@ -44,3 +47,11 @@ export const jsNumberData = splitRow(jsNumber)
 export const jsObjectData = splitRow(jsObject)
 
 export const jsStringData = splitRow(jsString)
+
+export const jsMapSetData = splitRow(jsMapSet)
+
+export const jsPromiseData = splitRow(jsPromise)
+
+export const jsGlobalData = splitRow(jsGlobal)
+
+export const jsAllData = splitRow(jsArray.concat(jsDate, jsMath, jsNumber, jsObject, jsString, jsMapSet, jsPromise, jsGlobal))

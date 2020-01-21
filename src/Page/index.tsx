@@ -1,7 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Coder, { CoderMethots } from '../Components/Coder';
-import produce from 'immer'
-import { jsStringData, jsArrayData, jsDateData, jsMathData, jsNumberData, jsObjectData, cssData } from '../data'
+// import produce from 'immer'
+import { 
+    jsAllData,
+    jsStringData, 
+    jsArrayData, 
+    jsDateData, 
+    jsMathData, 
+    jsNumberData, 
+    jsObjectData, 
+    jsMapSetData,
+    jsPromiseData,
+    jsGlobalData
+} from '../data'
 import styles from './index.less'
 
 export default function Index() {
@@ -30,6 +41,9 @@ export default function Index() {
         setIsStart(false)
         setSelect(value)
         switch (value) {
+        case '0':
+            setCodeData(jsAllData)
+            break;
         case '1':
             setCodeData(jsArrayData)
             break;
@@ -47,6 +61,15 @@ export default function Index() {
             break;
         case '6':
             setCodeData(jsStringData)
+            break;
+        case '7':
+            setCodeData(jsMapSetData)
+            break;
+        case '8':
+            setCodeData(jsPromiseData)
+            break;
+        case '8':
+            setCodeData(jsGlobalData)
             break;
         default :
             setCodeData(jsArrayData)
@@ -69,12 +92,17 @@ export default function Index() {
     return (<>
         <div>
             <select className="select" value={select} onChange={changeSelect}>
-                <option value="1">Array</option>
-                <option value="2">Date</option>
-                <option value="3">Math</option>
-                <option value="4">Number</option>
-                <option value="5">Object</option>
-                <option value="6">String</option>
+                
+                <option value="1">js Array</option>
+                <option value="2">js Date</option>
+                <option value="3">js Math</option>
+                <option value="4">js Number</option>
+                <option value="5">js Object</option>
+                <option value="6">js String</option>
+                <option value="7">js Map Set</option>
+                <option value="8">js Promise</option>
+                <option value="9">js 全局函数</option>
+                <option value="0">js all</option>
             </select>
 
             <button className="button ml-sm" onClick={start}>开始</button>

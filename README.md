@@ -4,4 +4,4 @@
 
 > 体验地址
 
-[https://webzhd.github.io/react-code-game/](https://webzhd.github.io/react-code-game/)
+[https://ui.zdean.cn/react-code-game/](https://ui.zdean.cn/react-code-game/)

@@ -1,7 +1,5 @@
-> 每天练习10分钟，一个月记住js常用API
-
-> 通过练习打字，强化记忆
-
-> 体验地址
-
 [https://ui.zdean.cn/react-code-game/](https://ui.zdean.cn/react-code-game/)
+
+练习打字的同时可以学习js的内置方法
+
+React hook + TS 实现

@@ -68,7 +68,7 @@ export default function Index() {
         case '8':
             setCodeData(jsPromiseData)
             break;
-        case '8':
+        case '9':
             setCodeData(jsGlobalData)
             break;
         default :

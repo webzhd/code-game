@@ -111,7 +111,7 @@ function Row(props: RowProps, ref: React.Ref<RowRefMethods>) {
             onChange={changeInputValue} onPaste={paste}/>
         
         {itemWord && !isReadOnly && <div className={styles.desc}>
-            <p><a href={itemWord.url}>[查看详情]</a>{itemWord.desc}</p>
+            <p><a href={itemWord.url} target="_blank">[查看详情]</a>{itemWord.desc}</p>
         </div>}
     </div>)
 }

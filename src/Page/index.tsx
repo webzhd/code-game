@@ -11,16 +11,17 @@ import {
     jsObjectData, 
     jsMapSetData,
     jsPromiseData,
-    jsGlobalData
+    jsGlobalData,
+    jsWordsData
 } from '../data'
 import styles from './index.less'
 
 export default function Index() {
     
-    const [select, setSelect] = useState('1')
+    const [select, setSelect] = useState('10')
     const [speed, setSpeed] = useState('') 
     const [correct, setCorrect] = useState('')
-    const [codeData, setCodeData] = useState(jsArrayData)
+    const [codeData, setCodeData] = useState(jsWordsData)
     const [coderKey, updateCoderKey] = useState('')
     const [isStart, setIsStart] = useState(false)
     const codeRef = useRef<CoderMethots>(null)
@@ -71,6 +72,9 @@ export default function Index() {
         case '9':
             setCodeData(jsGlobalData)
             break;
+        case '10':
+            setCodeData(jsWordsData)
+            break;
         default :
             setCodeData(jsArrayData)
         }
@@ -102,6 +106,7 @@ export default function Index() {
                 <option value="7">js Map Set</option>
                 <option value="8">js Promise</option>
                 <option value="9">js 全局函数</option>
+                <option value="10">常用单词</option>
                 <option value="0">js all</option>
             </select>
 

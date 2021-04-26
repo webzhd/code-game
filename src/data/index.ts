@@ -9,6 +9,7 @@ import jsString from './js/js-string'
 import jsMapSet from './js/js-map-set'
 import jsPromise from './js/js-promise'
 import jsGlobal from './js/js-global'
+import jsWords from './js/js-words'
 
 
 function splitRow(data: any[]): any[] {
@@ -53,5 +54,7 @@ export const jsMapSetData = splitRow(jsMapSet)
 export const jsPromiseData = splitRow(jsPromise)
 
 export const jsGlobalData = splitRow(jsGlobal)
+
+export const jsWordsData = splitRow(jsWords)
 
 export const jsAllData = splitRow(jsArray.concat(jsDate, jsMath, jsNumber, jsObject, jsString, jsMapSet, jsPromise, jsGlobal))

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Coder, { CoderMethots } from '../Components/Coder';
 // import produce from 'immer'
 import { 
+    jsWebGLData,
     jsAllData,
     jsStringData, 
     jsArrayData, 
@@ -18,10 +19,10 @@ import styles from './index.less'
 
 export default function Index() {
     
-    const [select, setSelect] = useState('10')
+    const [select, setSelect] = useState('11')
     const [speed, setSpeed] = useState('') 
     const [correct, setCorrect] = useState('')
-    const [codeData, setCodeData] = useState(jsWordsData)
+    const [codeData, setCodeData] = useState(jsWebGLData)
     const [coderKey, updateCoderKey] = useState('')
     const [isStart, setIsStart] = useState(false)
     const codeRef = useRef<CoderMethots>(null)
@@ -75,6 +76,9 @@ export default function Index() {
         case '10':
             setCodeData(jsWordsData)
             break;
+        case '11':
+            setCodeData(jsWebGLData)
+            break;
         default :
             setCodeData(jsArrayData)
         }
@@ -96,7 +100,7 @@ export default function Index() {
     return (<>
         <div>
             <select className="select" value={select} onChange={changeSelect}>
-                
+                <option value="11">js WebGL</option>
                 <option value="1">js Array</option>
                 <option value="2">js Date</option>
                 <option value="3">js Math</option>

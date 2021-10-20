@@ -10,13 +10,14 @@ import jsMapSet from './js/js-map-set'
 import jsPromise from './js/js-promise'
 import jsGlobal from './js/js-global'
 import jsWords from './js/js-words'
+import jsWebGL from './js/js-WebGL'
 
 
 function splitRow(data: any[]): any[] {
     let result: any[] = [], row: any[] = [], len = 0;
     data.forEach((word, i) => {
         row.push(word);
-        len += (word.text.length + 1);// 单词长度和一个空格
+        len += (word.text?.length + 1);// 单词长度和一个空格
         if (len >= 90) { // 超出一行
             const item = row.pop();  // 取出最后一个
             result.push(row); // 把row放在result里面
@@ -57,4 +58,6 @@ export const jsGlobalData = splitRow(jsGlobal)
 
 export const jsWordsData = splitRow(jsWords)
 
-export const jsAllData = splitRow(jsArray.concat(jsDate, jsMath, jsNumber, jsObject, jsString, jsMapSet, jsPromise, jsGlobal))
+export const jsWebGLData = splitRow(jsWebGL)
+
+export const jsAllData = splitRow(jsArray.concat(jsDate, jsMath, jsNumber, jsObject, jsString, jsMapSet, jsPromise, jsGlobal, jsWebGLData))

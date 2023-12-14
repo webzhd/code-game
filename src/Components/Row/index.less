@@ -1,0 +1,33 @@
+.box {
+    position: relative;
+}
+.desc {
+    position: absolute;
+    bottom: -105px;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.1);
+    z-index: 100;
+    width: 100%;
+    padding: 20px;
+}
+.content-row {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    &:focus {
+        border-bottom: 1px solid #a6c8ff;
+    }
+    .success {
+        color: #0f0
+    }
+    .error {
+        color: #f00
+    }
+}

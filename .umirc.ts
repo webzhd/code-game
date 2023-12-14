@@ -2,7 +2,7 @@ import { defineConfig } from "umi";
 
 export default defineConfig({
   base: "/code-game",
-  publicPath: "/",
+  publicPath: "code-game/",
   title: "打字练习",
   outputPath: 'docs',
   routes: [
